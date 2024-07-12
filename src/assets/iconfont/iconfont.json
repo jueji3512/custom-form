@@ -1,0 +1,72 @@
+{
+  "id": "4616932",
+  "name": "form",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "39066585",
+      "name": "search",
+      "font_class": "search",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "9487372",
+      "name": "history",
+      "font_class": "history",
+      "unicode": "e632",
+      "unicode_decimal": 58930
+    },
+    {
+      "icon_id": "19885964",
+      "name": "component",
+      "font_class": "component",
+      "unicode": "e683",
+      "unicode_decimal": 59011
+    },
+    {
+      "icon_id": "30936966",
+      "name": "dark-mode",
+      "font_class": "dark-mode",
+      "unicode": "e79b",
+      "unicode_decimal": 59291
+    },
+    {
+      "icon_id": "40355115",
+      "name": "light-mode",
+      "font_class": "light-mode",
+      "unicode": "e6c3",
+      "unicode_decimal": 59075
+    },
+    {
+      "icon_id": "15838583",
+      "name": "arrow-left-fill",
+      "font_class": "arrow-left-fill",
+      "unicode": "e688",
+      "unicode_decimal": 59016
+    },
+    {
+      "icon_id": "15838584",
+      "name": "arrow-right-fill",
+      "font_class": "arrow-right-fill",
+      "unicode": "e689",
+      "unicode_decimal": 59017
+    },
+    {
+      "icon_id": "4936479",
+      "name": "left-circle-fill",
+      "font_class": "left-circle-fill",
+      "unicode": "e844",
+      "unicode_decimal": 59460
+    },
+    {
+      "icon_id": "4936485",
+      "name": "right-circle-fill",
+      "font_class": "right-circle-fill",
+      "unicode": "e845",
+      "unicode_decimal": 59461
+    }
+  ]
+}
