@@ -1,4 +1,4 @@
-export type menuType = 'component' | 'history'
+export type menuType = 'component' | 'history' | 'layer'
 export type menuItemType = {
   title: string,
   type: menuType,

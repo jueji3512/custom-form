@@ -1,10 +1,13 @@
-import {FC, ReactNode, useState} from "react";
+import {FC, useState} from "react";
 import MenuWidget from "@/designer/widgets/MenuWidget.tsx";
 import LayoutContext from "@/designer/context/LayoutContext";
 import {menuItemMapType, menuItemType} from "@/designer/types";
+import ComponentPanel from "@/designer/panels/ComponentPanel.tsx";
+import WorkSpacePanel from "@/designer/panels/WorkSpacePanel.tsx";
+import SettingPanel from "@/designer/panels/SettingPanel.tsx";
 
 interface LayoutProps {
-  children: ReactNode
+
 }
 
 const menuItemMap: menuItemMapType = {
@@ -13,6 +16,11 @@ const menuItemMap: menuItemMapType = {
     type: 'component',
     icon: 'component'
   },
+  layer: {
+    title: '表单层级',
+    type: 'layer',
+    icon: 'layer'
+  },
   history: {
     title: '历史记录',
     type: 'history',
@@ -20,8 +28,7 @@ const menuItemMap: menuItemMapType = {
   }
 }
 
-const Layout: FC<LayoutProps> = ({children}) => {
-
+const Layout: FC<LayoutProps> = () => {
   const [menuItem, setMenuItem] = useState<menuItemType>(menuItemMap.component)
   function handleMenuChange(menu: menuItemType) {
     setMenuItem(menu)
@@ -35,7 +42,9 @@ const Layout: FC<LayoutProps> = ({children}) => {
       >
         <MenuWidget currentMenuItem={menuItem} menuItemMap={menuItemMap} onMenuChange={handleMenuChange} />
         <main className="flex-1 flex rounded-xl bg-slate-50 overflow-hidden shadow-md dark:bg-zinc-700 duration-500">
-          {children}
+          <ComponentPanel />
+          <WorkSpacePanel />
+          <SettingPanel />
         </main>
       </div>
     </LayoutContext.Provider>

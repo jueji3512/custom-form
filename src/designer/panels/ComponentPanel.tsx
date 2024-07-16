@@ -1,7 +1,8 @@
-import {FC, useContext, useState} from "react";
+import {FC, ReactNode, useContext, useState} from "react";
 import LayoutContext from "@/designer/context/LayoutContext.tsx";
 import ComponentListWidget from "@/designer/widgets/ComponentListWidget.tsx";
 import HistoryWidget from "@/designer/widgets/HistoryWidget.tsx";
+import LayerWidget from "@/designer/widgets/LayerWidget.tsx";
 
 type ComponentPanelProps = FC
 
@@ -13,8 +14,9 @@ const ComponentPanel: ComponentPanelProps = () => {
     setIsCollapse(preIsCollapse => !preIsCollapse)
   }
 
-  let buttonClasses = 'absolute -right-7 top-1/2 transform -translate-y-1/2 iconfont text-3xl text-slate-400'
   let panelClasses = 'relative h-full shadow-lg duration-500'
+  let buttonClasses = 'absolute -right-6 top-1/2 transform -translate-y-1/2 iconfont text-2xl text-slate-400'
+
   if (isCollapse) {
     buttonClasses += ' icon-arrow-right-fill'
     panelClasses += ' w-0'
@@ -23,12 +25,23 @@ const ComponentPanel: ComponentPanelProps = () => {
     panelClasses += ' w-[260px]'
   }
 
+  let menu: ReactNode = null
+  switch (menuItem.type) {
+    case "history":
+      menu = <HistoryWidget />
+      break
+    case "layer":
+      menu = <LayerWidget />
+      break
+    default:
+      menu = <ComponentListWidget />
+      break
+  }
+
   return (
     <div className={panelClasses}>
-      <div className="px-6 py-4">
-        {
-          menuItem.type === 'component' ? <ComponentListWidget /> : <HistoryWidget />
-        }
+      <div className="absolute w-[260px] overflow-hidden top-0 right-0 h-full px-2 py-4">
+        {menu}
       </div>
       <button
         className={buttonClasses}

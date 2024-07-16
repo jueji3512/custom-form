@@ -1,6 +1,6 @@
 import {FC, useContext} from "react";
 import {ThemeContext} from "@/designer/context/ThemeContext.tsx";
-import Button from "@/packages/Button";
+import Button from "@/only-ui/packages/Button";
 
 type ThemeSwitchProps = FC
 

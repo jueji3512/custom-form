@@ -9,7 +9,7 @@ const SettingPanel: SettingPanelProps = () => {
     setIsCollapse(preIsCollapse => !preIsCollapse)
   }
 
-  let buttonClasses = 'absolute -left-7 top-1/2 transform -translate-y-1/2 iconfont text-3xl text-slate-400'
+  let buttonClasses = 'absolute -left-6 top-1/2 transform -translate-y-1/2 iconfont text-2xl text-slate-400'
   let panelClasses = 'relative h-full shadow-lg duration-500'
   if (isCollapse) {
     buttonClasses += ' icon-arrow-left-fill'

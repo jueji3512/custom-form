@@ -1,7 +1,7 @@
 import {FC} from "react";
 import ThemeSwitch from "@/designer/components/ThemeSwitch.tsx";
 import {menuItemMapType, menuItemType} from "@/designer/types";
-import Button from "@/packages/Button";
+import Button from "@/only-ui/packages/Button";
 
 interface IMenuProps {
   currentMenuItem: menuItemType

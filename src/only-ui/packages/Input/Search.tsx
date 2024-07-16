@@ -2,7 +2,6 @@ import { FC } from "react"
 import Input from "./index.tsx"
 
 export interface ISearchProps {
-  id?: string
   placeholder?: string
 }
 

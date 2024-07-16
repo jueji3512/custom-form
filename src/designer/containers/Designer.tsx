@@ -1,22 +1,22 @@
-import {FC, ReactNode} from "react";
+import {FC} from "react";
 import DesignerContext from "@/designer/context/DesignerContext.tsx";
 import Layout from "@/designer/containers/Layout.tsx";
 
-type DesignerProps = FC<{
-  children: ReactNode
-}>
+type DesignerProps = FC
 
 function createDesigner() {
-  return {}
+  const formStyle = {}
+
+  return {
+    formStyle
+  }
 }
 
-const Designer: DesignerProps = ({ children }) => {
+const Designer: DesignerProps = () => {
   const designer = createDesigner()
   return (
     <DesignerContext.Provider value={designer}>
-      <Layout>
-        {children}
-      </Layout>
+      <Layout />
     </DesignerContext.Provider>
   )
 }
